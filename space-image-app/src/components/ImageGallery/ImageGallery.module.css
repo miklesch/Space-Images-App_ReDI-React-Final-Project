@@ -1,0 +1,62 @@
+.imageGallery {
+    background-color: #282c34;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
+    border-radius: 10px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the content fits within the rounded corners */
+    width: 200px; /* Fixed width, but can be responsive based on your design */
+    margin: 10px; /* Margin around each card */
+    text-align: center; /* Center text and content */
+    justify-content: space-between;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange children in a column */
+    height: 300px; /* Full height to encapsulate content and button */
+    position: relative;
+ }
+  
+  .imageGallery h3 {
+    margin: 0px; /* Remove default margin */
+    padding: 8px; /* Padding for the title */
+    max-height: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: #21252b;   
+  }
+  
+  .imageGallery img {
+    width: 200px; /* Make image take up full card width */
+    height: 300px;   
+    object-fit: cover; /* Cover the entire card with the image prevents to distort image */
+    display: block;
+    }
+
+.imageGalleryContents button {
+    background: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    transition-duration: 200ms;
+    padding: 1rem 0;   
+}
+
+.heartButton {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.heartButton:hover {
+  transform: scale(1.2);
+}
+.heartButton.liked {
+  color: red;
+}

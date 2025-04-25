@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-grid-gallery": "^1.0.1",
+    "use-debounce": "^10.0.1"
+  }
+}

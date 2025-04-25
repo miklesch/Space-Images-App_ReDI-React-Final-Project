@@ -1,0 +1,40 @@
+.navBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #21252b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 6px 12px #0f1012;
+    z-index: 1;
+}
+
+.navBarContentWrapper {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 30px;
+}
+
+.navBar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+.heartButton {
+    position: absolute;
+    top: 85px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    color: red;
+  }
+  
+  .heartButton:hover {
+    transform: scale(1.2);
+  }

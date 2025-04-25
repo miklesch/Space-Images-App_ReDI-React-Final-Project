@@ -1,0 +1,40 @@
+.button {
+  appearance: none;
+  background-color: whitesmoke;
+  border-radius: 9999px;
+  border: 1px solid #fff;
+  outline: none;
+  color: black;
+  padding: 5px 10px;
+  width: 200px;
+  text-transform: uppercase;
+  width: 100%;
+  
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: palevioletred;
+  }
+
+  &:focus {
+    outline-color: none !important;
+  }
+}
+
+.mouseEnterBorder {
+  border: 1px solid palevioletred;
+}
+
+.focusedBorder {
+  border: 1px solid rgb(0, 172, 184);
+}
+
+.selected {
+  background-color: rgb(224, 141, 169);;
+
+  &:hover {
+    background-color: rgba(206, 71, 116, 0.962);;
+  }
+
+}
