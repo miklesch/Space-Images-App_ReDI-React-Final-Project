@@ -1,4 +1,3 @@
-import React from 'react';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 import './App.css'
 import SpaceImagesView from './views/SpaceImagesView.jsx';
