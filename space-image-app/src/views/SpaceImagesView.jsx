@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import styles from './SpaceImagesView.module.css'
 import SearchBar from '../components/SearchBar/SearchBar'
@@ -12,15 +12,16 @@ const SpaceImagesView = () => {
     const [spaceImages, setSpaceImages] = useState([]);
     const [search, setSearch] = useState("hubble nasa");
     const [likes, setLikes] = useState({});
-    const UNSPLASH_ACCESS_KEY = import.meta.env.SECRET_UNSPLASH_SPACE_APP_ACCESS_KEY
+    //const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_SPACE_APP_ACCESS_KEY
 
     const fetchAPIData = async (query) => {
-        console.log("Fetching data with query: ", query);       
-        const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${UNSPLASH_ACCESS_KEY}`;
+        console.log("Fetching data with query: ", query) 
+        const url = `/api/fetchImages?query=${encodeURIComponent(query)}`
+        //const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${UNSPLASH_ACCESS_KEY}`;
         console.log(url)
         try {
             const response = await fetch(url);
-            console.log("API response status: ", response.status);
+            console.log("API response status: ", response.status)
 
             if (!response.ok) {
                 console.error(`API response status: ${response.status}`)

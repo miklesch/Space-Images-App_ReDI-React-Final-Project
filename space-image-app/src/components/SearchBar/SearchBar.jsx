@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from "./SearchBar.module.css"
+import PropTypes from 'prop-types';
 
 const SearchBar = ({ setSearch, hiddenValue }) => {
 
@@ -7,7 +8,7 @@ const SearchBar = ({ setSearch, hiddenValue }) => {
 
   useEffect(() => {
     setSearch(`${hiddenValue} hubble nasa`);
-  }, []);
+  }, [hiddenValue, setSearch]);
 
   const [searchClasses, setSearchClasses] = useState([styles.search]);
 
@@ -53,6 +54,10 @@ const SearchBar = ({ setSearch, hiddenValue }) => {
       />
     </div>
   )
+}
+SearchBar.propTypes = {
+  setSearch: PropTypes.func.isRequired,
+  hiddenValue: PropTypes.string
 }
 
 export default SearchBar

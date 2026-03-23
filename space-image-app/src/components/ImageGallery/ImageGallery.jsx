@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react'
 import styles from "./ImageGallery.module.css"
-import { useNavigate } from 'react-router-dom';
 import { useFavoriteImages } from '../../contexts/FavoriteImagesContext';
-
+import PropTypes from 'prop-types';
 
 const ImageGallery = ({ id, name, image, onClick, onLikeClick }) => {
-  const navigate = useNavigate();
+  
   const { addFavoriteImage, removeFavoriteImage, favoriteImages } = useFavoriteImages();
   const isLiked = favoriteImages.some((favImage) => favImage.id === id);
 
@@ -32,6 +30,14 @@ const ImageGallery = ({ id, name, image, onClick, onLikeClick }) => {
       </div>
     </div>
   );
+};
+
+ImageGallery.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  onLikeClick: PropTypes.func.isRequired
 };
 
 export default ImageGallery
