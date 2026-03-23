@@ -1,3 +1,18 @@
 {
-  "rootDirectory": "space-image-app"
+  "rootDirectory": "space-image-app",
+  "builds": [
+    {
+      "src": "space-image-app/api/fetchImages.jsx",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "space-image-app/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    { "src": "/api/fetchImages", "dest": "space-image-app/api/fetchImages.jsx" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
