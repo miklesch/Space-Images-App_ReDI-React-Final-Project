@@ -21,5 +21,5 @@ export default async function handler(req, res) {
         console.log("data response of fetchImages Component>> ", data)
     } catch (error) {
         res.status(500).json({ error: "Error fetching data" });
-    };
-};
+    }
+}

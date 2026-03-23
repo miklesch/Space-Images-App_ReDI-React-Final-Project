@@ -84,7 +84,7 @@ const SpaceImagesView = () => {
             <div className={styles.App}>
                 <NavBar>
                     <h2>Space Images Gallery</h2>
-                    <SearchBar setSearch={setSearch} defaultValue="hubble nasa" />
+                    <SearchBar setSearch={setSearch} hiddenValue="hubble nasa" />
                     <FilterButtons onFilterClick={handleFilterButtonClick} />
                 </NavBar>
                 <div className={styles.spaceImageViewWrapper}>
