@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "space-image-app",
   "builds": [
     {
       "src": "space-image-app/api/fetchImages.jsx",
