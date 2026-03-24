@@ -1,4 +1,6 @@
-import React, { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext } from 'react'
+import PropTypes from 'prop-types';
+
 
 export const FavoriteImagesContext = createContext({});
 
@@ -9,7 +11,7 @@ export const FavoriteImagesProvider = ({ children }) => {
 
     const addFavoriteImage = (image) => {
         setFavoriteImages((prevImages) => {
-            if (prevImages.some((img) => img.id === image)) {
+            if (prevImages.some((img) => img.id === image.id)) {
                 return prevImages;
             }
             return [...prevImages, image];
@@ -27,4 +29,8 @@ export const FavoriteImagesProvider = ({ children }) => {
             {children}
         </FavoriteImagesContext.Provider>
     );
+};
+
+FavoriteImagesProvider.propTypes = {
+    children: PropTypes.node
 };

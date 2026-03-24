@@ -14,7 +14,6 @@ function App() {
       <Router>
         <Routes>
           <Route index element={<SpaceImagesView />} />
-         {/*  {<Route path="/results/:id" element={<FavoriteImages />} />} */}
           <Route path="/results/favorites" element={<FavoriteImages />} />
           <Route path="/*" element={<p>404 Page not found</p>} />
         </Routes>

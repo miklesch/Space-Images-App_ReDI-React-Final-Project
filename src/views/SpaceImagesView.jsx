@@ -13,8 +13,7 @@ const SpaceImagesView = () => {
     const [search, setSearch] = useState("hubble nasa");
     const [likes, setLikes] = useState({});
    
-    const fetchAPIData = async (query) => {
-        console.log("Fetching data with query: ", query) 
+    const fetchAPIData = async (query) => { 
         const url = `/api/fetchImages?query=${encodeURIComponent(query)}`
        
         try {
