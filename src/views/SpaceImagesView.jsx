@@ -73,8 +73,11 @@ const SpaceImagesView = () => {
     };
 
     const handleFilterButtonClick = (filterValue) => {
-        console.log("Filter button clicked: ", filterValue);
-        setSearch(`hubble nasa ${filterValue}`);
+        if (filterValue === "all") {
+            setSearch("hubble nasa");
+        } else {
+            setSearch(`hubble nasa ${filterValue}`);
+        }
     };
 
     return (
