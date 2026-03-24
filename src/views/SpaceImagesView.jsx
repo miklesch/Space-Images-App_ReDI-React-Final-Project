@@ -12,13 +12,11 @@ const SpaceImagesView = () => {
     const [spaceImages, setSpaceImages] = useState([]);
     const [search, setSearch] = useState("hubble nasa");
     const [likes, setLikes] = useState({});
-    //const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_SPACE_APP_ACCESS_KEY
-
+   
     const fetchAPIData = async (query) => {
         console.log("Fetching data with query: ", query) 
         const url = `/api/fetchImages?query=${encodeURIComponent(query)}`
-        //const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${UNSPLASH_ACCESS_KEY}`;
-        console.log(url)
+       
         try {
             const response = await fetch(url);
             console.log("API response status: ", response.status)

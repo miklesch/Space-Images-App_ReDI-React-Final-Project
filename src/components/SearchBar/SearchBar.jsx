@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const SearchBar = ({ setSearch, hiddenValue }) => {
 
-  const [inputValue, setInputValue] = useState(hiddenValue || "");
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     setSearch(`${hiddenValue} hubble nasa`);
